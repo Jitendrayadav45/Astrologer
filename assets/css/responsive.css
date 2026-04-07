@@ -418,3 +418,81 @@
     font-size: 0.95rem;
   }
 }
+
+/* --- High-End UI Component Responsive Scaling --- */
+@media (max-width: 991.98px) {
+  .specialist-card, .feature-card, .testimonial-card-modern {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Expertise Component */
+  .card-header-modern {
+    padding: 2rem 1rem 1.5rem;
+  }
+  .card-header-modern .icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+  .card-header-modern .icon-wrapper i {
+    font-size: 1.8rem !important;
+  }
+  .card-body-modern {
+    padding: 1.5rem 1.25rem;
+  }
+  
+  /* Why Choose Us Component */
+  .feature-card {
+    padding: 2rem 1.5rem;
+  }
+  .feature-icon {
+    width: 70px;
+    height: 70px;
+  }
+  .feature-icon i {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Testimonial Component */
+  .testimonial-card-modern {
+    padding: 1.5rem 1.25rem;
+  }
+  .quote-icon-modern {
+    margin-bottom: 10px;
+  }
+  .quote-icon-modern i {
+    font-size: 2rem !important;
+  }
+  .testimonial-text {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* Deep Mobile Squish Adjustments */
+  .card-header-modern .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  .card-header-modern .icon-wrapper i {
+    font-size: 1.5rem !important;
+  }
+  .card-header-modern .card-title {
+    font-size: 1.25rem;
+  }
+  .service-item-modern {
+    font-size: 0.92rem;
+  }
+  .footer-spiritual {
+    text-align: center;
+  }
+  .footer-spiritual .d-flex.gap-3 {
+    justify-content: center;
+  }
+  .footer-spiritual .list-unstyled {
+    align-items: center;
+  }
+}

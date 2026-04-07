@@ -126,12 +126,56 @@ var SITE = {
     });
   }
 
+  function initCustomScrollSpy() {
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    if (!sections.length || !navLinks.length) return;
+
+    function updateActiveNav() {
+      var scrollPosition = window.scrollY + 200; // Deep offset for fixed nav buffer
+      var isAtBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 50);
+      var currentSectionId = null;
+
+      // Detect current section via standard layout calculations
+      sections.forEach(function (section) {
+        if (
+          section.offsetTop <= scrollPosition &&
+          (section.offsetTop + section.offsetHeight) > scrollPosition
+        ) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      // Edge case: If user hit the absolute bottom of the document, force the last section to active
+      if (isAtBottom) {
+        currentSectionId = sections[sections.length - 1].getAttribute('id');
+      }
+
+      // Apply the active state precisely
+      if (currentSectionId) {
+        navLinks.forEach(function (link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + currentSectionId) {
+            link.classList.add('active');
+          }
+        });
+      }
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    
+    // Evaluate initial state once DOM fully renders the heights
+    setTimeout(updateActiveNav, 150);
+  }
+
   function onReady() {
     initSmoothScroll();
     initNavScroll();
     initAos();
     initStorySwiper();
     initContactForm();
+    initCustomScrollSpy();
   }
 
   onReady();
