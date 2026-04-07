@@ -1,0 +1,324 @@
+/**
+ * Theme layer: Bootstrap alignment, navbar, typography, motion (respects reduced motion).
+ */
+:root {
+  --bs-primary: #7c2841;
+  --bs-primary-rgb: 124, 40, 65;
+  --bs-link-color: #6b2438;
+  --bs-link-hover-color: #4a1a2e;
+  --bs-body-color: #2d2420;
+  --bs-secondary-color: #5c4f47;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body.site-body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: #2d2420;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Light sections: muted text must stay readable (WCAG-friendly) */
+.site-body .text-muted {
+  color: #5c4f47 !important;
+  opacity: 1 !important;
+}
+
+.bg-light .lead,
+section .lead.text-muted {
+  color: #4a3f3a !important;
+}
+
+/* —— Spiritual navbar (readable logo + gold accent) —— */
+.navbar.navbar--spiritual {
+  background: linear-gradient(180deg, #2d121c 0%, #1f0c14 100%) !important;
+  border-bottom: 2px solid var(--accent-color);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  backdrop-filter: none;
+}
+
+.navbar.navbar--spiritual .navbar-toggler {
+  border-color: rgba(201, 162, 39, 0.45);
+}
+
+.navbar.navbar--spiritual .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+.navbar.navbar--spiritual.navbar-scrolled {
+  background: linear-gradient(180deg, #241018 0%, #180a10 100%) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+}
+
+.navbar-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.navbar-wordmark__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+  font-weight: 700;
+  color: #fffefb !important;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+}
+
+.navbar-wordmark__sub {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #fde68a !important;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 1;
+}
+
+.navbar-logo-img {
+  height: 46px;
+  width: auto;
+  max-height: 46px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* Overrides style.css .navbar-nav .nav-link — must stay high-contrast on dark bar */
+.navbar.navbar--spiritual .navbar-brand {
+  color: #fffefb !important;
+}
+
+.navbar.navbar--spiritual .navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem !important;
+  position: relative;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.navbar.navbar--spiritual .navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  transition: width var(--transition), left var(--transition);
+}
+
+.navbar.navbar--spiritual .navbar-nav .nav-link:hover,
+.navbar.navbar--spiritual .navbar-nav .nav-link:focus-visible {
+  color: #fef3c7 !important;
+  transform: none;
+}
+
+.navbar.navbar--spiritual .navbar-nav .nav-link:hover::after {
+  width: 70%;
+  left: 15%;
+}
+
+.navbar.navbar--spiritual .navbar-nav .nav-link.active {
+  color: #fde68a !important;
+}
+
+.navbar.navbar--spiritual .btn-primary {
+  background: linear-gradient(135deg, var(--accent-color), #a67c1f);
+  border: none;
+  color: #1a0f08 !important;
+  font-weight: 600;
+  padding: 0.5rem 1.15rem;
+  box-shadow: 0 4px 14px rgba(201, 162, 39, 0.35);
+}
+
+.navbar.navbar--spiritual .btn-primary:hover {
+  background: linear-gradient(135deg, #ddb84a, var(--accent-color));
+  color: #1a0f08 !important;
+  transform: translateY(-1px);
+}
+
+/* Hero headline gold accent */
+.hero-text--gold {
+  color: #fde68a !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.hero-lead {
+  color: #f8f4ee !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+section .text-white p.lead,
+section .text-white .lead {
+  color: rgba(255, 255, 255, 0.96) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.hero-section .btn-primary {
+  background: linear-gradient(135deg, var(--accent-color), #9a7320);
+  border: none;
+  color: #1a0f08 !important;
+  font-weight: 600;
+}
+
+.hero-section .btn-primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.hero-section .btn-outline-light {
+  border: 2px solid rgba(255, 248, 239, 0.85);
+  color: #fff8ef !important;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+}
+
+.hero-section .btn-outline-light:hover {
+  background: rgba(255, 248, 239, 0.15);
+  border-color: var(--accent-gold-light);
+  color: #fff !important;
+}
+
+/* Section headings: warm gold kicker (readable on cream) */
+section .text-primary.fw-bold.text-uppercase,
+.astor-pretitle {
+  color: #9a6b1a !important;
+  letter-spacing: 0.14em;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+}
+
+section .display-5.fw-bold {
+  color: #1f1612 !important;
+}
+
+section .text-white .display-5.fw-bold,
+section .text-center.text-white h2.display-5 {
+  color: #ffffff !important;
+}
+
+/* Cards & interactive polish */
+.card,
+.testimonial-card-modern,
+.service-card-white,
+.astor-card {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.testimonial-card-modern:hover,
+.service-card-white:hover {
+  transform: translateY(-4px);
+}
+
+/* Back to top */
+.fix-iconsx a {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border: 2px solid rgba(201, 162, 39, 0.5);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.fix-iconsx a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(124, 40, 65, 0.4);
+}
+
+/* Contact links: maroon not bright blue */
+#contact a.text-decoration-none:not(.btn) {
+  color: var(--primary-color);
+}
+
+#contact a.text-decoration-none:not(.btn):hover {
+  color: var(--secondary-color);
+}
+
+/* Loader spinner */
+.loader .spinner-border {
+  color: var(--accent-color) !important;
+}
+
+/* Hero: display serif + subtle celestial texture */
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+}
+
+.hero-section {
+  background: linear-gradient(
+    145deg,
+    #3d1528 0%,
+    #5c2438 35%,
+    #2d121c 70%,
+    #1a0c12 100%
+  ) !important;
+}
+
+.hero-section .hero-bg-gradient {
+  z-index: 0;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, rgba(255, 248, 239, 0.2), transparent),
+    radial-gradient(1px 1px at 30% 80%, rgba(201, 162, 39, 0.25), transparent),
+    radial-gradient(1px 1px at 70% 30%, rgba(255, 255, 255, 0.15), transparent),
+    radial-gradient(2px 2px at 90% 60%, rgba(232, 213, 163, 0.12), transparent);
+  opacity: 0.85;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section .floating-elements {
+  z-index: 1;
+}
+
+@media (max-width: 575.98px) {
+  .navbar-wordmark__title {
+    font-size: 1.05rem;
+  }
+  .navbar-wordmark__sub {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+  }
+  .navbar-logo-img {
+    height: 40px !important;
+    width: auto !important;
+  }
+  .navbar.navbar--spiritual .btn-primary {
+    width: 100%;
+    margin-top: 0.75rem;
+    margin-left: 0 !important;
+  }
+}

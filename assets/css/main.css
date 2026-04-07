@@ -1,0 +1,8 @@
+/**
+ * Entry stylesheet — layered imports (expand into base/components over time).
+ * Order: tokens → legacy site styles → responsive overrides.
+ */
+@import url("./base/_variables.css");
+@import url("./style.css");
+@import url("./theme.css");
+@import url("./responsive.css");
