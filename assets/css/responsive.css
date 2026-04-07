@@ -1,4 +1,10 @@
-/* Extra Large screens (xl) - 1200px and up */
+/* ============================================
+   RESPONSIVE DESIGN SYSTEM
+   Senior Developer Architecture — Zero Overflow
+   Targets: Desktop > Laptop > Tablet > Mobile
+   ============================================ */
+
+/* --- Extra Large screens (xl) - 1200px+ --- */
 @media (min-width: 1200px) {
   .hero-content h1 {
     font-size: 3.5rem;
@@ -6,16 +12,9 @@
   .hero-content p {
     font-size: 1.3rem;
   }
-  .service-card-modern {
-    padding: 116px;
-  }
-  .btn {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-  }
 }
 
-/* Large screens (lg) - 992px to 1199px */
+/* --- Large screens (lg) - 992px to 1199px --- */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .hero-content h1 {
     font-size: 3.2rem;
@@ -23,244 +22,37 @@
   .hero-content p {
     font-size: 1.2rem;
   }
-  .service-card-modern {
-    padding: 2rem;
-  }
 }
 
-/* Medium screens (md) - 768px to 991px */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .hero-content h1 {
-    font-size: 2.8rem;
-  }
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-  .service-card-modern {
-    padding: 1.8rem;
-    margin-bottom: 2rem;
-  }
-  .service-title {
-    font-size: 1.3rem;
-  }
-  .service-description {
-    font-size: 0.95rem;
-  }
-  .btn {
-    padding: 0.8rem 1.6rem;
-    font-size: 0.95rem;
-  }
-  .navbar-brand {
-    font-size: 1.3rem;
-  }
-  .section-heading h2 {
-    font-size: 2.2rem;
-  }
-}
-
-/* Small screens (sm) - 576px to 767px */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-  .service-card-modern {
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .service-title {
-    font-size: 1.2rem;
-  }
-  .service-description {
-    font-size: 0.9rem;
-  }
-  .service-card-modern {
-    padding: 1.5rem;
-  }
-  .service-card-modern .btn {
-    width: 100%;
-    max-width: none;
-    margin-top: auto;
-  }
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
-  .section-heading h2 {
-    font-size: 2rem;
-  }
-  .feature-card {
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .service-card-modern {
-    padding: 1.5rem;
-  }
-  .service-card-modern .btn {
-    width: 100%;
-    max-width: none;
-    margin-top: auto;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .service-card-modern {
-    padding: 1.2rem;
-  }
-  .service-card-modern .service-icon-wrapper {
-    width: 70px;
-    height: 70px;
-  }
-  .service-card-modern .service-title {
-    font-size: 1.2rem;
-  }
-  .service-card-modern .service-description {
-    font-size: 0.9rem;
-  }
-}
-
-/* Extra Small screens (xs) - below 576px */
-@media (max-width: 575.98px) {
-  .hero-section {
-    padding: 4rem 0;
-  }
-  .hero-content h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-  .hero-content p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-  .service-card-modern {
-    padding: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  .service-title {
-    font-size: 1.1rem;
-  }
-  .service-description {
-    font-size: 0.85rem;
-  }
-  .btn {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-  .service-card-modern .btn {
-    width: 100%;
-    margin-top: auto;
-  }
-  .navbar-brand {
-    font-size: 1.1rem;
-  }
-  .section-heading h2 {
-    font-size: 1.8rem;
-  }
-  .feature-card {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  .story-card {
-    padding: 25px;
-    margin-bottom: 1rem;
-  }
-  .author-name {
-    font-size: 1rem;
-  }
-  .author-desc {
-    font-size: 0.8rem;
-  }
-}
-
-/* General responsive improvements */
+/* ===== TABLET & BELOW (max-width: 991.98px) ===== */
 @media (max-width: 991.98px) {
   .container {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .floating-circle {
-    display: none;
+    display: none !important;
   }
-  .hero-content {
+
+  .hero-section .row {
+    min-height: auto !important;
+    padding-top: 100px;
+    padding-bottom: 3rem;
+  }
+
+  .hero-section .col-lg-6:first-child {
     text-align: center;
   }
-  .hero-image {
+
+  .hero-section .d-flex.gap-3 {
+    justify-content: center;
+  }
+
+  .hero-image-container {
     margin-top: 2rem;
   }
-}
 
-@media (max-width: 767.98px) {
-  .navbar-nav {
-    text-align: center;
-    margin-top: 1rem;
-  }
-  .navbar-nav .nav-item {
-    margin-bottom: 0.5rem;
-  }
-  .section-heading {
-    margin-bottom: 3rem;
-  }
-  .contact-form {
-    margin-bottom: 2rem;
-  }
-}
-
-/* Grid responsive fixes */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .col-sm-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .col-md-4 {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-  }
-  .col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .col-lg-4 {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .col-xl-4 {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-  .col-xl-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-}
-
-@media (min-width: 576px) {
-  .service-card {
-    height: 280px; /* sm screens */
-  }
-}
-@media (min-width: 992px) {
-  .service-card {
-    height: 340px; /* lg screens */
-  }
-}
-
-@media (max-width: 991.98px) {
   .section-title {
     font-size: 2rem;
   }
@@ -268,19 +60,158 @@
   .section-subtitle {
     font-size: 1rem;
   }
-  .section-title {
-    font-size: 2rem;
+
+  .specialist-card, .feature-card, .testimonial-card-modern {
+    margin-bottom: 1.5rem;
   }
 
   .testimonial-section {
     padding: 60px 0;
   }
+
   .form-container {
     margin-bottom: 40px;
   }
 }
 
-@media (max-width: 768px) {
+/* ===== TABLET PORTRAIT (max-width: 767.98px) ===== */
+@media (max-width: 767.98px) {
+  /* Navbar */
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    min-height: auto !important;
+  }
+  .hero-section .row {
+    padding-top: 90px;
+    padding-bottom: 2rem;
+  }
+  .hero-title {
+    font-size: 1.8rem !important;
+    line-height: 1.25;
+  }
+  .hero-lead {
+    font-size: 0.95rem !important;
+    line-height: 1.6;
+  }
+  .hero-section .btn-lg {
+    font-size: 0.85rem;
+    padding: 0.65rem 1.2rem;
+  }
+  .hero-image-container img {
+    max-width: 85%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Section Headings */
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+  .section-header {
+    margin-bottom: 30px;
+  }
+  .section-header h1,
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  .section-header p {
+    font-size: 0.95rem;
+  }
+  .display-5 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Service Cards */
+  .service-card {
+    height: auto;
+    min-height: 250px;
+  }
+  .service-content {
+    padding: 15px;
+  }
+  .service-title {
+    font-size: 1.2rem;
+  }
+
+  /* Video Section */
+  .video-section {
+    padding: 50px 0;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  /* Expert Cards */
+  .card-header-modern {
+    padding: 1.5rem 1rem 1.25rem;
+  }
+  .card-header-modern .icon-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+  .card-header-modern .icon-wrapper i {
+    font-size: 1.6rem !important;
+  }
+  .card-body-modern {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Feature Cards */
+  .feature-card {
+    padding: 1.5rem 1.25rem;
+  }
+  .feature-icon {
+    width: 65px;
+    height: 65px;
+  }
+  .feature-icon i {
+    font-size: 1.4rem !important;
+  }
+
+  /* Testimonial */
+  .testimonial-card-modern {
+    padding: 1.25rem 1rem;
+  }
+  .quote-icon-modern {
+    margin-bottom: 8px;
+  }
+  .quote-icon-modern i {
+    font-size: 1.8rem !important;
+  }
+  .testimonial-text {
+    font-size: 0.92rem;
+    margin-bottom: 1.2rem;
+  }
+  .testimonial-card {
+    margin: 0 5px;
+    padding: 20px;
+  }
+  .custom-slider .slick-center .testimonial-card {
+    transform: scale(1);
+  }
+
+  /* Contact Section */
+  .contact-form,
+  .contact-methods {
+    padding: 20px;
+  }
+  .form-header,
+  .info-header {
+    padding: 20px;
+  }
+  .contact-section {
+    padding: 50px 0;
+  }
+
+  /* General cleanup */
   .header {
     flex-direction: column;
     align-items: flex-start;
@@ -298,194 +229,142 @@
     width: 100%;
     padding: 12px 15px;
     border-radius: 14px;
-    background: rgba(233, 13, 60, 0.05);
-  }
-  .feature-item i {
-    font-size: 26px;
-  }
-  .header .features .feature-item + .feature-item {
-    margin-top: 10px;
-  }
-  .video-section {
-    padding: 60px 0;
-  }
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .testimonial-card {
-    margin: 0 10px;
-    padding: 25px;
-  }
-
-  .testimonial-text {
-    font-size: 1rem;
-  }
-
-  .section-header {
-    margin-bottom: 30px;
-  }
-  .section-header h1 {
-    font-size: 2rem;
-  }
-
-  .testimonial-card {
-    padding: 20px;
-  }
-
-  .testimonial-text {
-    font-size: 1rem;
-  }
-
-  .custom-slider .slick-center .testimonial-card {
-    transform: scale(1);
-  }
-
-  .contact-section {
-    padding: 60px 0;
-  }
-
-  .section-header h2 {
-    font-size: 2rem;
-  }
-
-  .section-header p {
-    font-size: 1rem;
-  }
-
-  .form-header,
-  .info-header {
-    padding: 25px;
-  }
-
-  .contact-form,
-  .contact-methods {
-    padding: 25px;
-  }
-  .service-title {
-    font-size: 1.3rem;
-  }
-  .service-content {
-    padding: 15px;
   }
   .section-padding {
     padding: 50px 0;
   }
 }
 
-@media (max-width: 576px) {
+/* ===== MOBILE (max-width: 575.98px) ===== */
+@media (max-width: 575.98px) {
+  /* Hero deep mobile */
+  .hero-section .row {
+    padding-top: 80px;
+    padding-bottom: 1.5rem;
+  }
+  .hero-title {
+    font-size: 1.55rem !important;
+    line-height: 1.3;
+  }
+  .hero-lead {
+    font-size: 0.88rem !important;
+    line-height: 1.55;
+  }
+  .hero-section .btn-lg {
+    width: 100%;
+    font-size: 0.82rem;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-section .d-flex.gap-3 {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+  .hero-image-container img {
+    max-width: 90%;
+  }
+
+  /* General */
   .sscon-py {
     padding-top: 40px !important;
   }
-
-  .section-title {
-    font-size: 1.5rem;
+  .btn {
+    padding: 0.55rem 1rem;
+    font-size: 0.82rem;
   }
-
-  .section-subtitle {
+  .navbar-brand {
     font-size: 1rem;
   }
 
-  .testimonial-section {
-    padding: 50px 0;
+  /* Headings */
+  .section-heading h2 {
+    font-size: 1.6rem;
   }
-
-  .slick-prev {
-    left: -20px;
+  .section-title {
+    font-size: 1.35rem;
   }
-
-  .slick-next {
-    right: -20px;
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  .display-5 {
+    font-size: 1.5rem !important;
   }
   .section-header h1 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
+  /* Cards */
+  .feature-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .story-card {
+    padding: 20px;
+    margin-bottom: 1rem;
+  }
+  .author-name {
+    font-size: 1rem;
+  }
+  .author-desc {
+    font-size: 0.8rem;
+  }
+
+  /* Expert card deep mobile */
+  .card-header-modern .icon-wrapper {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 12px;
+  }
+  .card-header-modern .icon-wrapper i {
+    font-size: 1.3rem !important;
+  }
+  .card-header-modern .card-title {
+    font-size: 1.15rem;
+  }
+  .service-item-modern {
+    font-size: 0.88rem;
+  }
+
+  /* Contact */
+  .contact-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+  .contact-details h5 {
+    font-size: 1rem;
+  }
+  .contact-details p {
+    font-size: 0.9rem;
+  }
+
+  /* Contact info card */
+  #contact .bg-white {
+    padding: 1.5rem !important;
+  }
+  #contact .contact-icon-wrapper {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  /* Slick slider */
+  .slick-prev {
+    left: -15px;
+  }
+  .slick-next {
+    right: -15px;
+  }
   .slick-dots {
     bottom: -30px;
   }
-  .contact-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
+
+  /* Testimonials */
+  .testimonial-section {
+    padding: 40px 0;
   }
 
-  .contact-details h5 {
-    font-size: 1.1rem;
-  }
-
-  .contact-details p {
-    font-size: 0.95rem;
-  }
-}
-
-/* --- High-End UI Component Responsive Scaling --- */
-@media (max-width: 991.98px) {
-  .specialist-card, .feature-card, .testimonial-card-modern {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  /* Expertise Component */
-  .card-header-modern {
-    padding: 2rem 1rem 1.5rem;
-  }
-  .card-header-modern .icon-wrapper {
-    width: 70px;
-    height: 70px;
-  }
-  .card-header-modern .icon-wrapper i {
-    font-size: 1.8rem !important;
-  }
-  .card-body-modern {
-    padding: 1.5rem 1.25rem;
-  }
-  
-  /* Why Choose Us Component */
-  .feature-card {
-    padding: 2rem 1.5rem;
-  }
-  .feature-icon {
-    width: 70px;
-    height: 70px;
-  }
-  .feature-icon i {
-    font-size: 1.5rem !important;
-  }
-  
-  /* Testimonial Component */
-  .testimonial-card-modern {
-    padding: 1.5rem 1.25rem;
-  }
-  .quote-icon-modern {
-    margin-bottom: 10px;
-  }
-  .quote-icon-modern i {
-    font-size: 2rem !important;
-  }
-  .testimonial-text {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width: 575.98px) {
-  /* Deep Mobile Squish Adjustments */
-  .card-header-modern .icon-wrapper {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-  }
-  .card-header-modern .icon-wrapper i {
-    font-size: 1.5rem !important;
-  }
-  .card-header-modern .card-title {
-    font-size: 1.25rem;
-  }
-  .service-item-modern {
-    font-size: 0.92rem;
-  }
+  /* Footer - center aligned on mobile */
   .footer-spiritual {
     text-align: center;
   }
@@ -495,4 +374,39 @@
   .footer-spiritual .list-unstyled {
     align-items: center;
   }
+  .footer-spiritual .col-lg-5 {
+    margin-bottom: 1rem;
+  }
 }
+
+/* ===== VERY SMALL MOBILE (<400px) ===== */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.35rem !important;
+  }
+  .hero-lead {
+    font-size: 0.82rem !important;
+  }
+  .astor-card {
+    padding: 1.2rem;
+  }
+  .astor-icon-box {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  .astor-card-title {
+    font-size: 1.15rem;
+  }
+  .astor-card-text {
+    font-size: 0.85rem;
+  }
+  .astor-card-link {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+  .display-5 {
+    font-size: 1.35rem !important;
+  }
+}
+
