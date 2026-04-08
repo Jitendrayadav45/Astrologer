@@ -4,7 +4,7 @@
 var SITE = {
   brand: 'Astrologer Pandit Ram Shastri',
   email: 'PanditRam@Astrology.com',
-  whatsapp: 'https://wa.me/919876543210',
+  whatsapp: 'https://wa.me/917851957845',
   phoneDisplay: '7851-957845',
   phoneTel: '+917851957845',
 };
