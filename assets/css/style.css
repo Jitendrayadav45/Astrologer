@@ -91,6 +91,7 @@ section, footer, nav, header, main, .container {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  padding-top: 40px;
 }
 
 .hero-bg-gradient {
