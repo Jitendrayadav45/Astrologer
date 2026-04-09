@@ -2,7 +2,7 @@
  * सभी contact / WhatsApp / phone यहाँ बदलें — एक जगह।
  */
 var SITE = {
-  brand: 'Astrologer Pandit Ram Shastri',
+  brand: 'Astrologer Pandit Sachin Sharma',
   email: 'PanditRam@Astrology.com',
   whatsapp: 'https://wa.me/917851957845',
   phoneDisplay: '7851-957845',

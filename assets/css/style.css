@@ -1,4 +1,4 @@
-/* Modern CSS for Astrologer Pandit Ram Shastri Website */
+/* Modern CSS for Astrologer Pandit Sachin Sharma Website */
 
 /* Design tokens: assets/css/base/_variables.css (imported via main.css) */
 
@@ -244,6 +244,78 @@ section, footer, nav, header, main, .container {
   color: var(--gray-color);
   margin-bottom: 1.5rem;
   line-height: 1.6;
+}
+
+/* Certificates Section */
+.certificates-section {
+  background: linear-gradient(180deg, #faf8f5 0%, #f0ece6 100%);
+  position: relative;
+}
+
+.certificates-section .row.g-4 {
+  align-items: stretch;
+}
+
+.certificate-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 8px 30px rgba(124, 40, 65, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(124, 40, 65, 0.14), 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  border-radius: 0.6rem;
+  display: block;
+}
+
+/* Navbar Certified Badge */
+.navbar-certified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(37, 211, 102, 0.2);
+  color: #4ade80;
+  font-size: 0.55rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.08em;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.navbar-certified-badge i {
+  font-size: 0.5rem;
+  color: #4ade80;
+}
+
+@media (max-width: 767.98px) {
+  .certificates-section {
+    padding: 2.5rem 0;
+  }
+
+  .certificate-card {
+    padding: 0.6rem;
+    border-radius: 0.75rem;
+  }
+
+  .certificate-card img {
+    height: auto;
+  }
 }
 
 .astor-section {
@@ -534,29 +606,72 @@ section, footer, nav, header, main, .container {
   transform: translateY(-2px);
 }
 
-/* Back to Top */
+/* Floating Action Buttons */
+.floating-action-btns {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.fab-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.fab-call {
+  background: linear-gradient(135deg, #c9a227, #a67c1f);
+}
+
+.fab-call:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 25px rgba(201, 162, 39, 0.5);
+  color: white;
+}
+
+.fab-whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c48);
+  font-size: 1.5rem;
+}
+
+.fab-whatsapp:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+  color: white;
+}
+
 .fix-iconsx {
   height: 50px;
   width: 50px;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   border-radius: 50%;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
   color: white;
   cursor: pointer;
-  transition: var(--transition);
-  box-shadow: var(--box-shadow);
-  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .fix-iconsx:hover {
   transform: scale(1.1);
-  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 15px 35px rgba(124, 40, 65, 0.4);
 }
 
 /* Responsive Design */
