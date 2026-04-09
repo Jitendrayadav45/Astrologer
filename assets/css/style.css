@@ -643,6 +643,13 @@ section, footer, nav, header, main, .container {
   color: white;
 }
 
+.fab-left {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  z-index: 1000;
+}
+
 .fab-whatsapp {
   background: linear-gradient(135deg, #25d366, #128c48);
   font-size: 1.5rem;
