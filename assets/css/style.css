@@ -1578,6 +1578,15 @@ p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* About section photo - reduced height */
+#about .about-img-custom-shadow {
+  max-height: 400px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 .about-img-custom-shadow:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 45px rgba(124, 40, 65, 0.22);
@@ -1657,6 +1666,57 @@ p {
 }
 
 /* About section end  */
+
+/* Gold Medalist Badge */
+.gold-medalist-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #b8860b, #ffd700, #daa520, #ffd700, #b8860b);
+  background-size: 200% 200%;
+  animation: goldShimmer 3s ease infinite;
+  color: #4a2800;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(184, 134, 11, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-medalist-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: badgeShine 2.5s ease-in-out infinite;
+}
+
+.gold-medalist-badge i {
+  font-size: 1.4rem;
+  color: #8B6914;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.gold-medalist-badge span {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+@keyframes goldShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes badgeShine {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
 
 /* slider section start  */
 .testimonial-section {
